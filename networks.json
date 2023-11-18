@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "PeerPal": {
+      "address": "0x1134584b96749fD4b597390a388210Ea88f2Fcdb",
+      "startBlock": 3200046
+    }
+  }
+}
