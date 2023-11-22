@@ -1,0 +1,39 @@
+type EscrowComplete @entity(immutable: true) {
+  id: Bytes!
+  orderId: BigInt! # uint256
+  escrow_buyer: Bytes! # address
+  escrow_seller: Bytes! # address
+  escrow_value: BigInt! # uint256
+  escrow_sellerfee: BigInt! # uint256
+  escrow_buyerfee: BigInt! # uint256
+  escrow_idImage: String! # string
+  escrow_currency: Bytes! # address
+  escrow_status: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type EscrowDeposit @entity(immutable: true) {
+  id: Bytes!
+  orderId: BigInt! # uint256
+  escrow_buyer: Bytes! # address
+  escrow_seller: Bytes! # address
+  escrow_value: BigInt! # uint256
+  escrow_sellerfee: BigInt! # uint256
+  escrow_buyerfee: BigInt! # uint256
+  escrow_idImage: String! # string
+  escrow_currency: Bytes! # address
+  escrow_status: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type EscrowDisputeResolved @entity(immutable: true) {
+  id: Bytes!
+  orderId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

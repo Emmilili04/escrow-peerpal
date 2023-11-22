@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: PeerPal
@@ -19,12 +19,14 @@ dataSources:
         - EscrowDisputeResolved
       abis:
         - name: PeerPal
-          file: ./abis/PeerPal.json
+          file: PeerPal/abis/PeerPal.json
       eventHandlers:
-        - event: EscrowComplete(indexed uint256,(address,address,uint256,uint256,uint256,string,address,uint8))
+        - event: EscrowComplete(indexed
+            uint256,(address,address,uint256,uint256,uint256,string,address,uint8))
           handler: handleEscrowComplete
-        - event: EscrowDeposit(indexed uint256,(address,address,uint256,uint256,uint256,string,address,uint8))
+        - event: EscrowDeposit(indexed
+            uint256,(address,address,uint256,uint256,uint256,string,address,uint8))
           handler: handleEscrowDeposit
         - event: EscrowDisputeResolved(indexed uint256)
           handler: handleEscrowDisputeResolved
-      file: ./src/peer-pal.ts
+      file: PeerPal/PeerPal.wasm
